@@ -1,0 +1,148 @@
+
+<head>
+  <!-- II - 1.	Add a title using the HTML title tag -->
+  <title>My first page - [Your name]</title>
+
+  <!-- II - 2.	Add metatags using HTML meta tags for the following 5 items -->
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is my first website" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="[Your name]" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- IV - 4.	By default, tables don't have any styles. Add basic styling by copying the code below to the head section of the page -->
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- works like <a href="/index.html">Home</a> -->
+      <a href="/">Home</a>
+      <a href="/form.html">Form</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- III - 8.	Add a page headline - add an h1 tag above your article with any content, e.g. "My HTML learning journey" -->
+    <h1>My HTML learning journey</h1>
+
+    <!-- III - 7.	Wrap all the elements you've created so far with an article tag -->
+    <article>
+      <!-- III - 9.	Add an article headline - add an h2 tag within the article tag with any content, e.g. "Learning elements - div, span, p, pre, ul, li, ol, article" -->
+      <h2>Learning elements - div, span, pre, p, ul, li, ol, article</h2>
+
+      <!-- III - 1.	Add 3 divs next to each other at the beginning of the body section and put some distinctive content into each of the divs -->
+      <div>HTML</div> <div>CSS</div> <div>JavaScript</div>
+
+      <!-- III - 2.	Below the divs, add 3 spans next to each other and put some distinctive content into each span -->
+      <span>HTML</span> <span>CSS</span> <span>JavaScript</span>
+
+      <!-- III - 3.	Below, add p and pre tags into your HTML body using the below contents: -->
+      <p>
+        p represents paragraph     without preserving      spacing
+      </p>
+      <pre>
+          Text in         a pre element
+          is displayed in a fixed-width
+          font, and it preserves
+          both      spaces and
+          line breaks
+      </pre>
+
+      <!-- III - 4.	Add an unordered list of 4 items to your page using ul and li tags. -->
+      <ul>
+        <li>avocado</li>
+        <li>kiwi</li>
+        <li>banana</li>
+        <li>peach</li>
+      </ul>
+
+      <!-- III - 5.	Add an ordered list of 3 items to your page using ol and li tags. -->
+      <ol>
+        <li>avocado</li>
+        <li>kiwi</li>
+        <!-- III - 6.	Add a nested list of 2 items inside the last item of either the unordered or ordered list above -->
+        <li>banana
+          <ul>
+            <li>ladyfinger</li>
+            <li>cavendish</li>
+          </ul>
+        </li>
+      </ol>
+
+    </article>
+
+    <!-- IV - 1.	Start by adding another article below the first one, with a unique h2 tag inside this newly created article -->
+    <article>
+      <h2>HTML elements - table</h2>
+
+      <!-- IV - 2.	Search the web for ‘HTML table’ and copy code you can find, e.g. from the Mozilla website -->
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">First header</th> <!-- IV -  7.	Now the header is missing for the third column. Fix this by adding a colspan attribute to the first th tag to make it span two columns. -->
+            <th>Second header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First cell - first row</td>
+            <td>Second cell - first row</td>
+            <td>Third cell - first row</td> <!-- IV - 5.	Add a third cell inside one of the rows. Observe how the table lost its shape -->
+          </tr>
+          <!-- IV - 3.	Create another row by copying a tr tag together with its children below the first row. -->
+          <tr>
+            <td rowspan="2">First cell - second row</td>
+            <td>Second cell - second row</td>
+            <td>Third cell - second row</td> <!-- IV - 6.	Fix the table by adding the missing td tag on the other row/s -->
+          </tr>
+          <!-- IV - 8.	Add a third row with 2 columns to the table and add a rowspan="2" attribute to one of the td tags on the second row, then observe what happens. -->
+          <tr>
+            <td>First cell - third row</td>
+            <td>Second cell - third row</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- V - 1.	Start by adding another article below the second one, with a unique h2 tag inside this newly created article -->
+    <article>
+      <h2>HTML elements - img, video, audio</h2>
+
+      <!-- V - 2.	Add an image to your website using the code below. Add a value for the alt attribute, and experiment with using one, 
+           then both of the width and height attributes to change the size of the image. -->
+      <img src="https://picsum.photos/400/400" alt="random picture" width="300" height="300"/>
+
+      <!-- V - 3.	Add a second image using the html_lab_image.jpg file from the assets folder. Give it an alt attribute and make it appear the same size as the first image. -->
+      <img src="/assets/html_lab_image.jpg" alt="html lab image" width="300" height="300"/>
+
+      <!-- V - 4.	Add a video using the example code below -->
+      <video width="250" autoplay> <!-- V -  6.	Try removing the controls attribute and adding autoplay attribute to both audio and video tags -->
+        <source src="/assets/flower.webm" type="video/webm">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    
+      <!-- V - 5.	Add an audio element using the example code below, then add a caption to it using figure and figcaption: -->
+      <figure>
+        <figcaption>Listen to the T-Rex:</figcaption>
+        <audio controls src="/assets/t-rex-roar.mp3">
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+      </figure>
+      
+    </article>
+
+  </main>
+
+  <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>
