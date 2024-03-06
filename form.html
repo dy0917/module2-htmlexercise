@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="description" content="This is my first website" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="John Doe" />
+    <meta name="author" content="Kingsley" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
@@ -20,8 +20,7 @@
 
     <main>
       <!-- VI - 1.	Add a form using a <form> tag like this: -->
-        <form method="POST" action="https://jsonplaceholder.typicode.com/posts">
-        
+      <form onsubmit="onSubmit(event)">
         <!-- VI - 2.	Inside the form, add 2 text inputs - one for inputting first name and the second one for inputting last name. -->
         <div>
           <label for="firstName">First name:</label>
@@ -40,7 +39,12 @@
           <input type="radio" id="css" name="favorite_language" value="CSS" />
           <label for="css">CSS</label>
 
-          <input type="radio" id="javascript" name="favorite_language" value="JavaScript" />
+          <input
+            type="radio"
+            id="javascript"
+            name="favorite_language"
+            value="JavaScript"
+          />
           <label for="javascript">JavaScript</label>
         </div>
 
@@ -73,8 +77,28 @@
     </main>
 
     <footer>Copyright &copy; 2024</footer>
+    <script>
+      const onSubmit = (e) => {
+        e.preventDefault();
+
+        const data = new FormData(e.target);
+        console.log([...data.entries()]);
+        const formDataObj = Object.fromEntries(data.entries());
+
+        console.log(formDataObj);
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formDataObj),
+        }).then(async (response) => {
+          console.log(await response.json());
+        });
+      };
+    </script>
   </body>
 </html>
 
 <!DOCTYPE html>
-<html>
+<html></html>
