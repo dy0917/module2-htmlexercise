@@ -84,7 +84,17 @@
         const data = new FormData(e.target);
         console.log([...data.entries()]);
         const formDataObj = Object.fromEntries(data.entries());
+
         console.log(formDataObj);
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formDataObj),
+        }).then(async (response) => {
+          console.log(await response.json());
+        });
       };
     </script>
   </body>
